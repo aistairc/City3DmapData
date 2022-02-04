@@ -1,4 +1,4 @@
-# Globally consistent 3D maps and sensor data in the city.
+# 3D maps and sensor data in the city.
 This City3DmapData repository provides the 3D maps and sensor data in an actual city of Japan. 
 This data set also contains 3D LIDAR and IMU data and Pose graphs of the mobile robot used for 3D map construction.
 You can also use these data sets to compare 3D map construction and LIDAR odometry in your work.
@@ -87,7 +87,7 @@ Please check your free disk space 33.4GB enough to download the data and click t
 ### Sensor data  
   Start the ROS visualization
   ~~~
-  scipts/visualize_sensordata.sh
+  scripts/visualize_sensordata.sh
   ~~~
   Play the rosbag in another terminal  
   ~~~
