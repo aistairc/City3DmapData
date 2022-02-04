@@ -1,19 +1,10 @@
 # Globally consistent 3D maps and sensor data in city.
 
 This City3DmapData repositry provides the 3D maps and sensor data in a real city of Japan. 
+<What purpose for use>
 These data are used for evaluation in article entiltled 
 “Semi-Automatic Town-Scale 3D Mapping using Building Information from Publicly Available Maps” in IEEE Access 2022 (url).
-
-
-## Requirements
-  We used robot operating system (ROS), point cloud library (PCL) and evo scripts for visualization data, and teseted by following version.
-  - [ROS melodic](http://wiki.ros.org/melodic/Installation)  
-  - [pcl 1.8.1](https://pointclouds.org/)
-  - [evo](https://michaelgrupp.github.io/evo/)
-
-## How to download the data
-  Please check your free disk space enough and download the data by the following url.
-  “URL”
+Please check your free disk space 33.4GB enough and download the data by the following url. “URL”
 
 ## Data structure
   The dataset is stored in a separate directory for each route written in the paper.
@@ -22,15 +13,14 @@ These data are used for evaluation in article entiltled
   └───route1
   │   - sensor_data.bag 
   │   - 3Dmap.pcd
-  │   - reference.tum 
-  │   - proposed_trajectory.tum
+  │   - reference_posegraph.tum 
+  │   - estimated_posegraph.tum
   └───route2
   │     ・
   │     ・
   │     ・
   └───route6
   ```
-
 
 ## Details of the data
 ### 1. Acquisition Platform
@@ -59,10 +49,14 @@ These data are used for evaluation in article entiltled
     <description>
 
 
-
-## Examples
-### How to visualize the data
-- Sensor data  
+## How to visualize the data  
+### Requirements  
+  We used robot operating system (ROS), point cloud library (PCL) and evo scripts for visualization data, and teseted by following version.
+  - [ROS melodic](http://wiki.ros.org/melodic/Installation)  
+  - [pcl 1.8.1](https://pointclouds.org/)
+  - [evo](https://michaelgrupp.github.io/evo/)
+      
+### Sensor data  
   Start the ROS visualization
   ~~~
   cd City3DmapData/launch/
@@ -74,13 +68,13 @@ These data are used for evaluation in article entiltled
   rosbag play sensor_data.bag --clock
   ~~~
 
-- 3D map  
+### 3D map  
   ~~~
   cd route<num>  
   pcl_viewer 3Dmap.pcd  
   ~~~
 
-- Pose graph  
+### Pose graph  
   ~~~
   cd route<num> 
   evo_traj tum --plot --plot_mode xy --ref reference_posegraph.tum estimated_posegraph.tum
