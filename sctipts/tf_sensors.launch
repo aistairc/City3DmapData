@@ -1,0 +1,9 @@
+<launch>
+
+  <!-- ground to velodyne -->
+  <node pkg="tf2_ros" type="static_transform_publisher" name="ground2velodyne" args="0.0 0.0 1.095 0.0 0.0 0.0 /ground /velodyne" />
+
+  <!-- ground to imu -->
+  <node pkg="tf2_ros" type="static_transform_publisher" name="ground2imu" args="0.1 0.2 1.055 0.0 0.0 3.14 /ground /imu_base_link" />
+
+</launch>
