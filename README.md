@@ -6,8 +6,8 @@ You can also use these data sets to compare 3D map construction and LIDAR odomet
 These data are used for evaluation in the article entitled 
 "Semi-Automatic Town-Scale 3D Mapping using Building Information from Publicly Available Maps" in IEEE Access 2022 (URL).
 
-- All dataset : [https://data.airc.aist.go.jp/city-3d-map/route1-6.zip](https://data.airc.aist.go.jp/city-3d-map/route1-6.zip)
-- Sample dataset (route1) : [https://data.airc.aist.go.jp/city-3d-map/route1.zip](https://data.airc.aist.go.jp/city-3d-map/route1.zip)
+- All dataset (33.4GB) : [https://data.airc.aist.go.jp/city-3d-map/route1-6.zip](https://data.airc.aist.go.jp/city-3d-map/route1-6.zip)
+- Sample dataset (2.1 GB) route1 : [https://data.airc.aist.go.jp/city-3d-map/route1.zip](https://data.airc.aist.go.jp/city-3d-map/route1.zip)
 
 <p align="center"><img src="img/3dmap_example.png" width="500px"></p>
 
